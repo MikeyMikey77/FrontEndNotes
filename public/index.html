@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>User Interface for Notes App</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        #container {
+            width: 100%;
+        }
+
+        #header {
+            height: 62px;
+            width: 100%;
+            background: hsla(184, 68%, 17%, 0.952);
+            border-bottom: 4px solid #7B5427;
+        }
+
+        #header h1 {
+            padding: 10px;
+            text-align: center;
+            height: 62px;
+            margin: 0;
+        }
+
+        .render-holder,
+        .actions-holder {
+            float: left;
+            min-height: calc(100vh - 66px);
+        }
+
+        .actions-holder {
+            background: #78a88e;
+            width: calc(25% - 2px);
+            border-right: 2px solid #7B5427;
+        }
+
+        .render-holder {
+            width: calc(75% - 2px);
+            background: #ECF5E4;
+            border-right: 2px solid #231F20;
+        }
+
+        #render,
+        #actions {
+            height: 100%;
+            width: calc(100% - 2px);
+        }
+
+        #render>*,
+        #actions>* {
+            padding-left: 10px;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Интерфейс пользователя для управления заметками</h1>
+        </div>
+        <div class="actions-holder">
+            <div id="actions">
+            </div>
+        </div>
+        <div class="render-holder">
+            <div id="render">
+            </div>
+        </div>
+    </div>
+    <script src="../dist/bundle.js"></script>
+</body>
+</html>
